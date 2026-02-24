@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkiMath Spring Passport Sample</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Spring Passport Sample</p>
+        <h1>SkiMath Calculator</h1>
+        <p class="subhead">Estimate if your pass strategy costs less than the benchmark unlimited pass.</p>
+      </header>
+
+      <section class="card">
+        <div class="mode-row">
+          <label><input type="radio" name="mode" value="one" checked /> 1 Trip</label>
+          <label><input type="radio" name="mode" value="two" /> 2 or more Trips</label>
+        </div>
+
+        <div id="oneWrap" class="stack">
+          <label for="oneOpt">Single Trip Option</label>
+          <select id="oneOpt"></select>
+        </div>
+
+        <div id="twoWrap" class="stack hidden">
+          <label for="twoOptA">Trip Option 1</label>
+          <select id="twoOptA"></select>
+
+          <label for="twoOptB">Trip Option 2</label>
+          <select id="twoOptB"></select>
+
+          <p id="twoHint" class="hint"></p>
+        </div>
+
+        <button id="calc">Calculate</button>
+
+        <div id="result"></div>
+        <p class="note">Benchmark pass cost: $1100. Legends Passport: $39.</p>
+      </section>
+
+      <footer class="footer-links">
+        <a href="./Spring Passport 2026 (7).pdf" target="_blank" rel="noopener noreferrer">Open Spring Passport PDF sample</a>
+      </footer>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

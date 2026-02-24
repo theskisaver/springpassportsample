@@ -23,7 +23,7 @@ body {
 }
 
 .app-shell {
-  max-width: 880px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 28px 16px 40px;
 }
@@ -57,31 +57,14 @@ h1 {
   padding: 16px;
 }
 
-.mode-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 10px;
-}
-
-.mode-row label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.stack {
-  display: grid;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.hidden {
-  display: none;
+.controls {
+  margin-bottom: 12px;
 }
 
 label {
-  font-weight: 600;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 
 select,
@@ -93,33 +76,64 @@ button {
   font: inherit;
 }
 
+.rows {
+  display: grid;
+  gap: 10px;
+}
+
+.trip-row {
+  display: grid;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.trip-title {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.row-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
 button {
-  margin-top: 14px;
   border: none;
   color: #fff;
   background: var(--brand);
   cursor: pointer;
 }
 
+button.ghost {
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid #d6d3d1;
+}
+
 button:hover {
-  filter: brightness(0.95);
+  filter: brightness(0.96);
 }
 
-.hint,
-.note {
-  margin: 6px 0 0;
-  color: var(--muted);
-  font-size: 0.86rem;
-}
-
-#result {
-  margin-top: 14px;
+.validation {
+  margin: 10px 0 0;
+  color: var(--bad);
+  font-weight: 600;
+  min-height: 20px;
 }
 
 .result-card {
+  margin-top: 12px;
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 12px;
+  background: #f9fafb;
 }
 
 .result-card.good {
@@ -158,12 +172,4 @@ button:hover {
 
 .breakdown li {
   margin: 4px 0;
-}
-
-.footer-links {
-  margin-top: 10px;
-}
-
-.footer-links a {
-  color: #1d4ed8;
 }
